@@ -1,0 +1,24 @@
+
+# Binary name hasil build
+bin = "tmp/main"
+
+# Command untuk build & run project
+cmd = "go build -o ./tmp/main ."
+
+# Jalankan binary
+full_bin = "tmp/main"
+
+# Folder/fIle yang di-watch (perubahan di sini akan trigger reload)
+include_dir = ["."]
+include_ext = ["go", "tpl", "tmpl", "html"]
+
+# Folder/fIle yang di-skip (tidak di-watch)
+exclude_dir = ["assets", "tmp", "vendor"]
+exclude_file = ["air.toml"]
+
+# Delay sebelum reload ulang (ms)
+delay = 1000
+
+# Log settings
+log_color = "true"
+log_time = "true"

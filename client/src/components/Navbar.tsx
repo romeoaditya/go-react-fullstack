@@ -22,7 +22,7 @@ export default function Navbar() {
             fontWeight="bold"
             color={useColorModeValue("gray.700", "gray.100")}
           >
-            Daily Tasks
+            <a href="https://xi-jadwal.vercel.app/">Daily Tasks</a>
           </Text>
 
           <Button

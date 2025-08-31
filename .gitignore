@@ -24,6 +24,9 @@ pnpm-debug.log*
 *.a
 *.so
 
+*.logs
+*.log
+
 # Temporary / cache
 tmp/
 dist/

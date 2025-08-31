@@ -2,6 +2,7 @@ import {Flex, Spinner, Stack, Text} from "@chakra-ui/react";
 import {useQuery} from "@tanstack/react-query";
 import TodoItem from "./TodoItem";
 import {useColorModeValue} from "./ui/color-mode";
+import {BASE_URL} from "../App";
 
 export type Todo = {
   _id: number;
@@ -13,7 +14,7 @@ const TodoList = () => {
   const {data: todos, isLoading} = useQuery<Todo[]>({
     queryKey: ["todos"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/api/todos");
+      const res = await fetch(BASE_URL + "/todos");
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Something went wrong");
       return data || [];
